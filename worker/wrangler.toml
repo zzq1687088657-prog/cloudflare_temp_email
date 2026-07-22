@@ -1,0 +1,20 @@
+name = "cloudflare_temp_email"
+main = "src/worker.ts"
+compatibility_date = "2025-04-01"
+compatibility_flags = [ "nodejs_compat" ]
+keep_vars = true
+
+[vars]
+PREFIX = "tmp"
+DEFAULT_DOMAINS = ["i3chuang.cn"]
+DOMAINS = ["i3chuang.cn"]
+JWT_SECRET = "9798acea1d2386e628a7804c52b6fc091d3fe7701693859aad6c979fa6a01efa"
+BLACK_LIST = ""
+ENABLE_USER_CREATE_EMAIL = true
+ENABLE_USER_DELETE_EMAIL = true
+ENABLE_AUTO_REPLY = false
+
+[[d1_databases]]
+binding = "DB"
+database_name = "temp-email-db"
+database_id = "207d8202-a6a5-44f7-b4eb-3ab80eb799fc"
